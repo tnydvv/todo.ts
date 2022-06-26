@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 
-interface IProps {
-  addTask: (name: string) => void;
-};
+import { IFormProps } from "../interface";
 
-const Form: React.FC<IProps> = ({ addTask }) => {
+const Form: React.FC<IFormProps> = ({ addTask }) => {
   const [name, setName] = useState<string>("");
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>): void => {
     setName(e.currentTarget.value);
-  }
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     addTask(name);
     setName("");
-  }
-  
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
@@ -38,6 +36,6 @@ const Form: React.FC<IProps> = ({ addTask }) => {
       </button>
     </form>
   );
-}
+};
 
 export default Form;

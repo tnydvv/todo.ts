@@ -1,12 +1,8 @@
 import React from "react";
 
-interface Props {
-  isPressed: boolean,
-  name: string,
-  setFilter: (name: string) => void;
-}
+import { IFilterButtonProps } from "../interface";
 
-const FilterButton: React.FC<Props> = ({ isPressed, name, setFilter }) => {
+const FilterButton: React.FC<IFilterButtonProps> = ({ isPressed, name, setFilter }) => {
   return (
     <button
       type="button"

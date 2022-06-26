@@ -77,7 +77,6 @@ body {
     font-size: 1.9rem;
     line-height: 1.31579;
   }
-  
 }
 
 /*END RESETS*/
@@ -166,11 +165,10 @@ body {
   .stack-small > * + * {
     margin-top: 1.4rem;
   }
-  
+
   .stack-large > * + * {
     margin-top: 2.8rem;
   }
-  
 }
 
 .stack-exception {
@@ -190,7 +188,6 @@ body {
   .todoapp {
     padding: 4rem;
   }
-  
 }
 
 .todoapp > * {
@@ -243,7 +240,6 @@ body {
   [class*="__lg"] {
     font-size: 2.4rem;
   }
-  
 }
 
 .filters {

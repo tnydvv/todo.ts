@@ -1,32 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
 
-interface IProps {
-  id: string,
-  name: string,
-  completed: boolean,
-  toggleTaskCompleted: (id: string) => void,
-  deleteTask: (id: string) => void,
-  editTask: (id: string, newName: string) => void
-}
+import { ITodoProps } from "../interface";
 
-const Todo: React.FC<IProps> = ({ id, name, completed, toggleTaskCompleted, deleteTask, editTask }) => {
+const Todo: React.FC<ITodoProps> = ({ id, name, completed, toggleTaskCompleted, deleteTask, editTask }) => {
   const [isEditing, setEditing] = useState<boolean>(false);
   const [newName, setNewName] = useState<string>('');
 
   const usePrevious = (value: boolean) => {
     const ref: React.MutableRefObject<boolean | undefined> = useRef();
+
     useEffect(() => {
       ref.current = value;
     });
+
     return ref.current;
   }
 
   const wasEditing = usePrevious(isEditing);
-
   const editFieldRef: any = useRef(null);
   const editButtonRef: any = useRef(null);
-
- 
 
   const handleChange = (e: any) => {
     setNewName(e.target.value);
