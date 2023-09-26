@@ -1,7 +1,7 @@
 # todo
 
 ## Live Demo
-[https://imantonious.github.io/todo-gh-pages/](https://imantonious.github.io/todo-gh-pages/)
+[https://tnydv.github.io/todo-gh-pages/](https://tnydv.github.io/todo-gh-pages/)
 
 # Getting Started with Create React App
 
